@@ -1,0 +1,102 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Xanh Mono', monospace;
+}
+
+body {
+    background-color: #25272b;
+    color: #ffff;
+}
+
+.hero {
+    background-image: url("/images/pexels-scott-webb-2117938.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(255, 107, 181, .8);
+    box-shadow: 0 0 7px rgb(255, 255, 255);
+    border: 1.5px solid rgb(212, 179, 204);
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: #25272b;
+    z-index: 11;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .number {
+    --rotation: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    box-shadow: 0 0 5px rgb(167, 58, 112);
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    z-index: 10;
+}
+
+.clock .hand.second {
+    width: 1px;
+    height: 45%;
+    background-color:  red;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+.clock .hand.minute {
+    width: 4px;
+    height: 40%;
+    background-color:  #25272b;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.clock .hand.hour {
+    width: 6px;
+    height: 30%;
+    background-color:  #25272b;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
