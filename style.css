@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 .clock {
@@ -99,4 +98,24 @@ body {
     background-color:  #25272b;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+}
+
+.hero-text {
+    margin-left: 30px;
+    font-size: large;
+    line-height: 25px;
+}
+
+.name {
+    font-size: small;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
 }
